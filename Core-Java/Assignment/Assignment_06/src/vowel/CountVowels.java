@@ -1,0 +1,23 @@
+package vowel;
+
+import java.util.Scanner;
+
+public class CountVowels {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the name of a person: ");
+        String name = sc.nextLine().toLowerCase(); // Convert to lowercase
+
+        int vowelCount = 0;
+
+        for (int i = 0; i < name.length(); i++) {
+            char ch = name.charAt(i);
+            if ("aeiou".indexOf(ch) != -1) {
+                vowelCount++;
+            }
+        }
+
+        System.out.println("Number of vowels in the name: " + vowelCount);
+    }
+}
